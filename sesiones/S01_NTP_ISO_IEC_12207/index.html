@@ -1,0 +1,1950 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://262is2.github.io/demo-is2/sesiones/S01_NTP_ISO_IEC_12207/">
+      
+      
+        <link rel="prev" href="../../silabo_is2_2026_2/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>S1 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software - Ingeniería de Software II</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#s1-ntp-isoiec-12207-modelamiento-de-procesos-del-ciclo-de-vida-del-software" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ingeniería de Software II" class="md-header__button md-logo" aria-label="Ingeniería de Software II" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ingeniería de Software II
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              S1 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/262is2/demo-is2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    262is2/demo-is2
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ingeniería de Software II" class="md-nav__button md-logo" aria-label="Ingeniería de Software II" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ingeniería de Software II
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/262is2/demo-is2" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    262is2/demo-is2
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Proyecto Sello
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guía de Proyecto Sello
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyecto-sello/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Silabos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silabo_is2_2026_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabo 2026-1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silabo_is2_2026_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabo 2026-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Calidad en los Procesos con NTP ISO/IEC 12207 e ISO/IEC 29110
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Calidad en los Procesos con NTP ISO/IEC 12207 e ISO/IEC 29110
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S1 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S1 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Índice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proposito-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Propósito de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Metodología
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-motivacion-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Motivación de la sesión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Motivación de la sesión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-caso-la-auditoria-o-el-desarrollo-sin-procesos-documentados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 Caso: la auditoría (o el desarrollo) sin procesos documentados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ubicacion-en-el-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ubicación en el curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-explica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Explica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Explica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-que-es-la-ntp-isoiec-12207-y-por-que-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Qué es la NTP ISO/IEC 12207 y por qué existe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-estructura-de-procesos-de-la-norma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Estructura de procesos de la norma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-relacion-con-la-isoiec-29110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Relación con la ISO/IEC 29110
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-del-modelamiento-de-procesos-al-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Del modelamiento de procesos al Project Charter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aplica-actividad-practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aplica: actividad práctica guiada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Aplica: actividad práctica guiada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reconocer-los-cuatro-grupos-de-procesos-de-la-ntp-isoiec-12207" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-leer-el-extracto-guiado-del-estandar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Leer el extracto guiado del estándar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-analizar-el-caso-guiado-y-discutir-en-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Analizar el caso guiado y discutir en equipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-elegir-el-sistema-o-proyecto-y-la-ruta-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Elegir el sistema o proyecto y la ruta de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mapear-procesos-ntp-isoiec-12207-aplicables-al-proyecto-elegido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-conformar-el-equipo-de-trabajo-y-roles-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Conformar el equipo de trabajo y roles iniciales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-completar-la-plantilla-de-propuesta-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Completar la plantilla de propuesta inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-crea-actividad-autonoma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Crea: actividad autónoma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Crea: actividad autónoma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-plantilla-de-evidencia-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Plantilla de evidencia individual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Plantilla de evidencia individual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-datos-del-estudiante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 Datos del estudiante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-trabajo-autonomo-realizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Trabajo autónomo realizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-evidencia-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 Evidencia técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-error-o-hallazgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.4 Error o hallazgo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-reflexion-tecnica-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.5 Reflexión técnica breve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-criterios-minimos-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Criterios mínimos de aceptación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cierre-evaluativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cierre evaluativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cierre evaluativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Resultados esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-evidencia-del-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Evidencia del producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-preguntas-de-defensa-y-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Preguntas de defensa y reflexión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-rubrica-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Rúbrica de evaluación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Índice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proposito-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Propósito de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Metodología
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-motivacion-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Motivación de la sesión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Motivación de la sesión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-caso-la-auditoria-o-el-desarrollo-sin-procesos-documentados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 Caso: la auditoría (o el desarrollo) sin procesos documentados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ubicacion-en-el-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ubicación en el curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-explica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Explica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Explica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-que-es-la-ntp-isoiec-12207-y-por-que-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Qué es la NTP ISO/IEC 12207 y por qué existe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-estructura-de-procesos-de-la-norma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Estructura de procesos de la norma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-relacion-con-la-isoiec-29110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Relación con la ISO/IEC 29110
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-del-modelamiento-de-procesos-al-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Del modelamiento de procesos al Project Charter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aplica-actividad-practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aplica: actividad práctica guiada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Aplica: actividad práctica guiada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reconocer-los-cuatro-grupos-de-procesos-de-la-ntp-isoiec-12207" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-leer-el-extracto-guiado-del-estandar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Leer el extracto guiado del estándar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-analizar-el-caso-guiado-y-discutir-en-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Analizar el caso guiado y discutir en equipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-elegir-el-sistema-o-proyecto-y-la-ruta-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Elegir el sistema o proyecto y la ruta de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mapear-procesos-ntp-isoiec-12207-aplicables-al-proyecto-elegido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-conformar-el-equipo-de-trabajo-y-roles-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Conformar el equipo de trabajo y roles iniciales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-completar-la-plantilla-de-propuesta-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Completar la plantilla de propuesta inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-crea-actividad-autonoma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Crea: actividad autónoma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Crea: actividad autónoma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-plantilla-de-evidencia-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Plantilla de evidencia individual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Plantilla de evidencia individual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-datos-del-estudiante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 Datos del estudiante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-trabajo-autonomo-realizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Trabajo autónomo realizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-evidencia-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 Evidencia técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-error-o-hallazgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.4 Error o hallazgo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-reflexion-tecnica-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.5 Reflexión técnica breve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-criterios-minimos-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Criterios mínimos de aceptación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cierre-evaluativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cierre evaluativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cierre evaluativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Resultados esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-evidencia-del-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Evidencia del producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-preguntas-de-defensa-y-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Preguntas de defensa y reflexión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-rubrica-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Rúbrica de evaluación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="s1-ntp-isoiec-12207-modelamiento-de-procesos-del-ciclo-de-vida-del-software">S1 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software</h1>
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>Tiempo: 20 min.</p>
+<h3 id="11-contexto">1.1 Contexto</h3>
+<p>Auditar (o desarrollar) software sin un marco de procesos común es como evaluar un edificio sin saber qué normas de construcción aplicar: cada persona juzga la calidad con su propio criterio. Esta sesión presenta el sílabo de Ingeniería de Software II y construye ese marco común: la <strong>NTP ISO/IEC 12207</strong>, la norma técnica peruana que modela los procesos del ciclo de vida del software y que fundamentará el Project Charter del proyecto integrador del semestre.</p>
+<h3 id="12-indice">1.2 Índice</h3>
+<ol>
+<li>Qué es la NTP ISO/IEC 12207 y por qué existe.</li>
+<li>Estructura de procesos de la norma.</li>
+<li>Relación con la ISO/IEC 29110.</li>
+<li>Del modelamiento de procesos al Project Charter.</li>
+</ol>
+<h3 id="13-proposito-de-aprendizaje">1.3 Propósito de aprendizaje</h3>
+<p>Al concluir la clase, estarás en condiciones de:</p>
+<ul>
+<li><strong>Identificar y explicar</strong> la estructura de procesos de la NTP ISO/IEC 12207, y <strong>argumentar</strong> por qué el curso la usa como marco conceptual para iniciar un proyecto integrador (de auditoría o de desarrollo de software) mediante un Project Charter.</li>
+</ul>
+<h3 id="14-producto-de-sesion">1.4 Producto de sesión</h3>
+<p>Mapa de procesos NTP ISO/IEC 12207 priorizados para el proyecto integrador del equipo, con el sistema o proyecto de software elegido (a auditar o a desarrollar) y el equipo de trabajo conformado.</p>
+<h3 id="15-metodologia">1.5 Metodología</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Actividades</th>
+<th>Orientaciones</th>
+<th>Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revisión previa individual</td>
+<td>Leer el sílabo del curso y el resumen de la NTP ISO/IEC 12207 (ver 1.6).</td>
+<td>Trabajo individual, antes de clase; traer al menos una idea de sistema o proyecto de software para auditar o desarrollar.</td>
+<td>Sílabo IS2 U1.</td>
+</tr>
+<tr>
+<td>Clase presencial</td>
+<td>Presentación del sílabo, lectura guiada del estándar y discusión de su estructura de procesos.</td>
+<td>Trabajo en equipo, siguiendo al docente paso a paso; consulta inmediata ante dudas sobre el alcance de cada grupo de procesos.</td>
+<td>Pasos 3.1 a 3.7 de esta guía.</td>
+</tr>
+<tr>
+<td>Evaluación formativa</td>
+<td>Revisión en clase de la propuesta inicial del equipo (sistema elegido, ruta de trabajo, procesos priorizados, roles).</td>
+<td>La evidencia se completa y sustenta de forma individual, fuera del aula, según los criterios mínimos de la sección 4.2.</td>
+<td>Plantilla de evidencia individual (4.1), rúbrica de evaluación (5.4).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-motivacion-de-la-sesion">1.6 Motivación de la sesión</h3>
+<h4 id="161-caso-la-auditoria-o-el-desarrollo-sin-procesos-documentados">1.6.1 Caso: la auditoría (o el desarrollo) sin procesos documentados</h4>
+<p>Un equipo de estudiantes decide auditar el sistema de facturación de una pequeña empresa. El primer día abren la base de datos y empiezan a anotar "cosas que están mal": campos sin validar, una tabla sin normalizar, un botón que no responde. Una semana después tienen una lista larga de observaciones, pero no pueden responder preguntas básicas: ¿esa observación es un problema de gestión de proyecto o de ingeniería? ¿A qué proceso del ciclo de vida pertenece? ¿Cómo se prioriza frente a otra observación distinta? Sin un marco de procesos, la auditoría es una lista de quejas, no un informe técnico verificable — y lo mismo le ocurriría a un equipo que decidiera <strong>desarrollar</strong> su propio sistema sin saber qué procesos del ciclo de vida debe cubrir.</p>
+<p>Pregunta guía:</p>
+<pre><code class="language-text">¿Qué le falta a este equipo para convertir su lista de observaciones en una auditoría (o un desarrollo) técnicamente fundamentada?
+</code></pre>
+<p>Preguntas para los estudiantes:</p>
+<ol>
+<li>¿Qué problemas genera evaluar (o construir) un sistema sin un marco de procesos común?</li>
+<li>¿Por qué una lista de observaciones sueltas no es una auditoría de calidad?</li>
+<li>¿Qué documento inicial habría ordenado el trabajo de este equipo, sea que audite o que desarrolle?</li>
+</ol>
+<h3 id="17-ubicacion-en-el-curso">1.7 Ubicación en el curso</h3>
+<ul>
+<li>Unidad: U1 - Calidad en los Procesos de Desarrollo de Software con NTP ISO/IEC 12207 e ISO/IEC 29110.</li>
+<li>Producto de unidad: Project Charter del proyecto integrador (auditoría o desarrollo de software) fundamentado en la NTP ISO/IEC 12207 y la ISO/IEC 29110, con matriz de calidad (atributos, métricas y riesgos).</li>
+<li>Producto del curso: Proyecto Sello: informe de auditoría (o de desarrollo de software) del proyecto integrador, fundamentado progresivamente en la NTP ISO/IEC 12207, la ISO/IEC 29110, la ISO/IEC 25010 y el modelo CMMI evaluado con SCAMPI, sustentado integralmente.</li>
+<li>Avance del producto en esta sesión: equipo de trabajo conformado, sistema o proyecto de software elegido (a auditar o a desarrollar) y primer mapa de procesos NTP ISO/IEC 12207 priorizados.</li>
+</ul>
+<p>Roadmap del producto de unidad:</p>
+<pre><code class="language-mermaid">flowchart TB
+    S1[&quot;S1&lt;br/&gt;NTP 12207: modelamiento&lt;br/&gt;de procesos&lt;br/&gt;HOY&quot;]
+    S2[&quot;S2&lt;br/&gt;NTP 12207: métricas de proceso&lt;br/&gt;e instrumentos de aseguramiento&quot;]
+    S3[&quot;S3&lt;br/&gt;ISO/IEC 29110:&lt;br/&gt;Gestión del proyecto&quot;]
+    S4[&quot;S4&lt;br/&gt;ISO/IEC 29110: Ingeniería&lt;br/&gt;en el desarrollo del software&quot;]
+    Evaluacion[&quot;Evaluación U1&lt;br/&gt;Project Charter sustentado&lt;br/&gt;S5&quot;]
+
+    S1 --&gt; S2 --&gt; S3 --&gt; S4 --&gt; Evaluacion
+
+    classDef today fill:#ffe08a,stroke:#9a6b00,stroke-width:2px,color:#111;
+    class S1 today;
+</code></pre>
+<p>Hoy se reconoce la estructura completa de procesos de la NTP ISO/IEC 12207 y se elige el sistema o proyecto del semestre. En las siguientes sesiones se profundiza en las métricas de proceso e instrumentos de aseguramiento de calidad (S2), y en los procesos de gestión e ingeniería de la ISO/IEC 29110 aplicados a organizaciones pequeñas (S3-S4). La evaluación de la Unidad 1 valida el Project Charter completo, con su matriz de calidad, sustentado por el equipo.</p>
+<h2 id="2-explica">2. Explica</h2>
+<p>Tiempo: 25 min.</p>
+<h3 id="21-que-es-la-ntp-isoiec-12207-y-por-que-existe">2.1 Qué es la NTP ISO/IEC 12207 y por qué existe</h3>
+<p>La <strong>NTP ISO/IEC 12207</strong> (Norma Técnica Peruana, equivalente nacional de la norma internacional <strong>ISO/IEC/IEEE 12207</strong>, <em>Systems and Software Engineering — Software Life Cycle Processes</em>) es el estándar que define y organiza los procesos que intervienen en el ciclo de vida completo del software: desde que se concibe la necesidad hasta que el software se retira de operación. No prescribe una metodología ni una herramienta específica; define <strong>qué procesos</strong> debe cubrir cualquier proyecto de software, sin importar si se ejecuta con Scrum, con un modelo en cascada o con cualquier otro enfoque.</p>
+<p>En Perú, la norma es publicada por INDECOPI como adaptación nacional de la norma internacional. El curso la usa como el primer marco de referencia del semestre porque tanto la ruta de <strong>auditoría</strong> (evaluar si un sistema de terceros cumple los procesos esperados) como la ruta de <strong>desarrollo</strong> (construir un sistema propio cubriendo esos mismos procesos) necesitan el mismo mapa de procesos como punto de partida.</p>
+<p><strong>Error frecuente</strong>: confundir "proceso" con "actividad suelta". Un proceso en la NTP ISO/IEC 12207 tiene propósito, resultados esperados y actividades que lo evidencian — no es solo una tarea marcada como hecha.</p>
+<h3 id="22-estructura-de-procesos-de-la-norma">2.2 Estructura de procesos de la norma</h3>
+<p>La NTP ISO/IEC 12207 organiza los procesos del ciclo de vida del software en cuatro grupos:</p>
+<table>
+<thead>
+<tr>
+<th>Grupo de procesos</th>
+<th>Propósito</th>
+<th>Ejemplos de procesos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procesos de acuerdo</td>
+<td>Formalizan la relación entre quien adquiere y quien provee el software.</td>
+<td>Adquisición, Suministro.</td>
+</tr>
+<tr>
+<td>Procesos organizacionales de habilitación de proyectos</td>
+<td>Aseguran que la organización tenga la capacidad para ejecutar proyectos de software de forma sostenida.</td>
+<td>Gestión del modelo de ciclo de vida, Gestión de infraestructura, Gestión de recursos humanos, Gestión de la calidad, Gestión del conocimiento.</td>
+</tr>
+<tr>
+<td>Procesos de gestión de proyecto (procesos técnicos de gestión)</td>
+<td>Planifican, controlan y verifican la ejecución del proyecto específico.</td>
+<td>Planificación del proyecto, Evaluación y control del proyecto, Gestión de riesgos, Gestión de la configuración, Aseguramiento de la calidad, Medición.</td>
+</tr>
+<tr>
+<td>Procesos técnicos</td>
+<td>Cubren el trabajo de ingeniería propiamente dicho, desde entender la necesidad hasta operar y dar de baja el software.</td>
+<td>Definición de requerimientos, Arquitectura, Diseño, Construcción, Integración, Verificación, Validación, Transición, Operación, Mantenimiento, Disposición.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Error frecuente</strong>: tratar los cuatro grupos como una secuencia estrictamente lineal. En la práctica se ejecutan de forma concurrente e iterativa a lo largo del proyecto: por ejemplo, la Gestión de la configuración (procesos de gestión de proyecto) acompaña a la Construcción y la Verificación (procesos técnicos) durante todo el ciclo, no solo al final.</p>
+<h3 id="23-relacion-con-la-isoiec-29110">2.3 Relación con la ISO/IEC 29110</h3>
+<p>La NTP ISO/IEC 12207 fue diseñada pensando en organizaciones de cualquier tamaño, lo que la hace extensa para un equipo pequeño o un proyecto académico. La <strong>ISO/IEC 29110</strong> (<em>Lifecycle Profiles for Very Small Entities</em>, VSE) resuelve ese problema: es un perfil simplificado de gestión e ingeniería dirigido a organizaciones de hasta 25 personas, que selecciona y adapta un subconjunto manejable de los procesos de la NTP ISO/IEC 12207, organizado en dos procesos centrales del <strong>Perfil Básico</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Proceso ISO/IEC 29110 (Perfil Básico)</th>
+<th>Relación con la NTP ISO/IEC 12207</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestión de Proyecto (PM)</td>
+<td>Adapta los procesos de gestión de proyecto (planificación, control, riesgos, configuración) a un equipo pequeño.</td>
+</tr>
+<tr>
+<td>Ingeniería en el Desarrollo del Software (SI)</td>
+<td>Adapta los procesos técnicos (requerimientos, diseño, construcción, integración, pruebas) a un alcance acotado.</td>
+</tr>
+</tbody>
+</table>
+<p>El curso trabaja la ISO/IEC 29110 en las sesiones S3 (Gestión del proyecto) y S4 (Ingeniería en el desarrollo del software) de esta misma unidad: la NTP ISO/IEC 12207 da el mapa completo de procesos; la ISO/IEC 29110 da la versión aplicable al tamaño de un equipo académico o de una pequeña organización.</p>
+<h3 id="24-del-modelamiento-de-procesos-al-project-charter">2.4 Del modelamiento de procesos al Project Charter</h3>
+<p>Cada grupo de procesos alimenta directamente un componente del Project Charter y de la matriz de calidad que se construyen en esta unidad:</p>
+<table>
+<thead>
+<tr>
+<th>Componente del Project Charter</th>
+<th>Grupo(s) de procesos que lo fundamenta(n)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objetivos y alcance del proyecto integrador</td>
+<td>Procesos de acuerdo; Procesos técnicos (definición de requerimientos).</td>
+</tr>
+<tr>
+<td>EDT (Estructura de Descomposición del Trabajo)</td>
+<td>Procesos de gestión de proyecto.</td>
+</tr>
+<tr>
+<td>Equipo de trabajo</td>
+<td>Procesos organizacionales de habilitación de proyectos.</td>
+</tr>
+<tr>
+<td>Matriz de calidad (atributos, métricas y riesgos)</td>
+<td>Procesos de gestión de proyecto (aseguramiento de la calidad, gestión de riesgos, medición).</td>
+</tr>
+<tr>
+<td>Ruta elegida (auditoría o desarrollo)</td>
+<td>Procesos técnicos (el alcance de ingeniería que se auditará o se ejecutará).</td>
+</tr>
+</tbody>
+</table>
+<p>Un Project Charter que no puede trazarse a un grupo de procesos de la norma es una lista de buenas intenciones, no un documento de auditoría o de ingeniería: por eso el curso exige que cada componente del Project Charter cite explícitamente el proceso de la NTP ISO/IEC 12207 (o de la ISO/IEC 29110) que lo sustenta.</p>
+<h2 id="3-aplica-actividad-practica-guiada">3. Aplica: actividad práctica guiada</h2>
+<p>Tiempo: 2h.</p>
+<p>Hoja de ruta de la sesión práctica:</p>
+<ul>
+<li>3.1 Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207.</li>
+<li>3.2 Leer el extracto guiado del estándar.</li>
+<li>3.3 Analizar el caso guiado y discutir en equipo.</li>
+<li>3.4 Elegir el sistema o proyecto y la ruta de trabajo (auditoría o desarrollo).</li>
+<li>3.5 Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido.</li>
+<li>3.6 Conformar el equipo de trabajo y roles iniciales.</li>
+<li>3.7 Completar la plantilla de propuesta inicial.</li>
+</ul>
+<h3 id="31-reconocer-los-cuatro-grupos-de-procesos-de-la-ntp-isoiec-12207">3.1 Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207</h3>
+<p><strong>Producto del paso:</strong> lista de los cuatro grupos de procesos con una frase propia por grupo.</p>
+<p>Usando la tabla de 2.2 como referencia, cada estudiante escribe con sus propias palabras qué cubre cada grupo de procesos, sin copiar literalmente la definición.</p>
+<h3 id="32-leer-el-extracto-guiado-del-estandar">3.2 Leer el extracto guiado del estándar</h3>
+<p><strong>Producto del paso:</strong> notas de lectura de los procesos de gestión de proyecto y técnicos.</p>
+<p>El docente guía la lectura de los procesos que fundamentan el Project Charter de esta unidad (gestión de proyecto, gestión de riesgos, gestión de la configuración, aseguramiento de la calidad, y el bloque de procesos técnicos). Cada estudiante registra, por proceso, una idea clave y una duda.</p>
+<h3 id="33-analizar-el-caso-guiado-y-discutir-en-equipo">3.3 Analizar el caso guiado y discutir en equipo</h3>
+<p><strong>Producto del paso:</strong> lista de observaciones del caso reclasificadas por proceso.</p>
+<p>Retoma el caso de 1.6.1 (auditoría del sistema de facturación). En equipo, toma al menos cuatro observaciones sueltas del caso ("campos sin validar", "tabla sin normalizar", etc.) y reclasifícalas indicando a qué grupo de procesos de la NTP ISO/IEC 12207 pertenecen.</p>
+<h3 id="34-elegir-el-sistema-o-proyecto-y-la-ruta-de-trabajo">3.4 Elegir el sistema o proyecto y la ruta de trabajo</h3>
+<p><strong>Producto del paso:</strong> enunciado breve del sistema o proyecto elegido y la ruta de trabajo.</p>
+<p>Cada equipo elige el sistema o proyecto de software real o simulado que trabajará durante todo el semestre, y define si seguirá la ruta de <strong>auditoría</strong> (evaluar un sistema propio o de terceros) o la ruta de <strong>desarrollo</strong> (construir un sistema propio). Responde:</p>
+<ol>
+<li>¿Qué sistema o proyecto se va a auditar o a desarrollar?</li>
+<li>¿Por qué el equipo eligió esa ruta (auditoría o desarrollo)?</li>
+<li>¿Quién es el usuario o área afectada por ese sistema?</li>
+</ol>
+<h3 id="35-mapear-procesos-ntp-isoiec-12207-aplicables-al-proyecto-elegido">3.5 Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido</h3>
+<p><strong>Producto del paso:</strong> tabla de procesos priorizados para el proyecto del equipo.</p>
+<table>
+<thead>
+<tr>
+<th>Grupo de procesos</th>
+<th>¿Aplica al proyecto?</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procesos de acuerdo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Procesos organizacionales de habilitación de proyectos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Procesos de gestión de proyecto</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Procesos técnicos</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Completa la tabla con el criterio del equipo; el peso de cada grupo varía según la ruta elegida (auditoría o desarrollo).</p>
+<h3 id="36-conformar-el-equipo-de-trabajo-y-roles-iniciales">3.6 Conformar el equipo de trabajo y roles iniciales</h3>
+<p><strong>Producto del paso:</strong> ficha del equipo con roles iniciales.</p>
+<p>Completa:</p>
+<pre><code class="language-text">Nombre del equipo:
+Integrantes:
+Sistema o proyecto elegido:
+Ruta de trabajo (auditoría o desarrollo):
+Rol inicial de cada integrante (referente de gestión, de ingeniería, de calidad, etc.):
+</code></pre>
+<h3 id="37-completar-la-plantilla-de-propuesta-inicial">3.7 Completar la plantilla de propuesta inicial</h3>
+<p><strong>Producto del paso:</strong> propuesta inicial completa del proyecto integrador.</p>
+<p>Completa:</p>
+<pre><code class="language-text">Sistema o proyecto elegido:
+Ruta de trabajo (auditoría o desarrollo):
+Usuario o área afectada:
+Grupos de procesos priorizados:
+Equipo y roles:
+Primer riesgo identificado:
+</code></pre>
+<h2 id="4-crea-actividad-autonoma">4. Crea: actividad autónoma</h2>
+<p>Tiempo: 2h fuera del aula.</p>
+<h3 id="41-plantilla-de-evidencia-individual">4.1 Plantilla de evidencia individual</h3>
+<p>Entrega un PDF con el siguiente nombre:</p>
+<pre><code class="language-text">S01_Equipo##_ApellidoNombre.pdf
+</code></pre>
+<p>El PDF debe usar esta estructura. La primera sección define el trabajo autónomo; completa las demás con tus evidencias.</p>
+<h4 id="411-datos-del-estudiante">4.1.1 Datos del estudiante</h4>
+<ul>
+<li>Nombre:</li>
+<li>Equipo:</li>
+<li>Sesión: S01 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software</li>
+<li>Rol o aporte realizado:</li>
+<li>Link del repositorio:</li>
+</ul>
+<h4 id="412-trabajo-autonomo-realizado">4.1.2 Trabajo autónomo realizado</h4>
+<p>Completa y evidencia estas tareas:</p>
+<ol>
+<li>Confirmar el sistema o proyecto de software del semestre y la ruta de trabajo (auditoría o desarrollo).</li>
+<li>Redactar en tus propias palabras los cuatro grupos de procesos de la NTP ISO/IEC 12207.</li>
+<li>Priorizar los grupos de procesos aplicables a tu proyecto, con justificación.</li>
+<li>Registrar el equipo de trabajo y los roles iniciales.</li>
+</ol>
+<h4 id="413-evidencia-tecnica">4.1.3 Evidencia técnica</h4>
+<p>Incluye capturas o extractos con una breve explicación debajo de cada uno:</p>
+<ul>
+<li>Lista de los cuatro grupos de procesos con descripción propia (equivalente a 3.1).</li>
+<li>Tabla de procesos priorizados para el proyecto, con justificación (equivalente a 3.5).</li>
+<li>Ficha del equipo con roles iniciales (equivalente a 3.6).</li>
+<li>Plantilla de propuesta inicial completa (equivalente a 3.7).</li>
+</ul>
+<h4 id="414-error-o-hallazgo">4.1.4 Error o hallazgo</h4>
+<p>Describe al menos un riesgo o duda que identificaste al elegir el sistema, la ruta de trabajo o priorizar los procesos:</p>
+<ul>
+<li>Qué ocurrió o qué limitación encontraste.</li>
+<li>Cómo lo identificaste.</li>
+<li>Cómo lo documentaste o qué supuesto tomaste.</li>
+</ul>
+<h4 id="415-reflexion-tecnica-breve">4.1.5 Reflexión técnica breve</h4>
+<p>Responde en 5 a 8 líneas:</p>
+<pre><code class="language-text">¿Por qué una auditoría (o un desarrollo) de software debe fundamentarse en un estándar de procesos como la NTP ISO/IEC 12207 antes de emitir cualquier observación?
+</code></pre>
+<h3 id="42-criterios-minimos-de-aceptacion">4.2 Criterios mínimos de aceptación</h3>
+<p>La evidencia individual se considera completa si:</p>
+<ul>
+<li>El sistema o proyecto está delimitado y la ruta de trabajo (auditoría o desarrollo) está claramente elegida.</li>
+<li>Los cuatro grupos de procesos de la NTP ISO/IEC 12207 están descritos con palabras propias, sin copia literal.</li>
+<li>Los procesos priorizados para el proyecto están justificados con al menos una razón concreta cada uno.</li>
+<li>El equipo de trabajo y los roles iniciales están registrados.</li>
+<li>La evidencia identifica un aporte individual verificable.</li>
+</ul>
+<h2 id="5-cierre-evaluativo">5. Cierre evaluativo</h2>
+<p>Tiempo: 20 min.</p>
+<p>Esta sección conecta el resultado de aprendizaje de la sesión con el producto que debe evidenciar cada estudiante.</p>
+<h3 id="51-resultados-esperados">5.1 Resultados esperados</h3>
+<p>Al finalizar la sesión, el estudiante debe demostrar que:</p>
+<ul>
+<li>Explica qué es la NTP ISO/IEC 12207 y por qué el curso la usa como marco conceptual.</li>
+<li>Identifica los cuatro grupos de procesos de la norma.</li>
+<li>Reconoce la relación entre la NTP ISO/IEC 12207 y la ISO/IEC 29110.</li>
+<li>Delimita el sistema o proyecto de software y la ruta de trabajo (auditoría o desarrollo) del semestre.</li>
+<li>Conforma un equipo de trabajo con roles iniciales.</li>
+</ul>
+<h3 id="52-evidencia-del-producto-de-sesion">5.2 Evidencia del producto de sesión</h3>
+<p>Cada estudiante entrega un PDF individual siguiendo la plantilla de la sección 4.1.</p>
+<p>Nombre del archivo:</p>
+<pre><code class="language-text">S01_Equipo##_ApellidoNombre.pdf
+</code></pre>
+<p>La evidencia debe demostrar:</p>
+<ul>
+<li>Sistema o proyecto y ruta de trabajo delimitados.</li>
+<li>Procesos NTP ISO/IEC 12207 priorizados y justificados.</li>
+<li>Equipo de trabajo conformado.</li>
+<li>Reflexión técnica breve.</li>
+</ul>
+<p>La revisión se realiza con los criterios mínimos de aceptación de la sección 4.2 y la rúbrica de la sección 5.4.</p>
+<h3 id="53-preguntas-de-defensa-y-reflexion">5.3 Preguntas de defensa y reflexión</h3>
+<ol>
+<li>¿Qué diferencia hay entre un proceso de gestión de proyecto y un proceso técnico según la NTP ISO/IEC 12207?</li>
+<li>¿Qué grupo de procesos consideras más crítico para tu proyecto y por qué?</li>
+<li>¿Por qué tu equipo eligió la ruta de auditoría o la ruta de desarrollo?</li>
+<li>¿Cómo se conecta la ISO/IEC 29110 con la NTP ISO/IEC 12207 que trabajaste hoy?</li>
+</ol>
+<h3 id="54-rubrica-de-evaluacion">5.4 Rúbrica de evaluación</h3>
+<table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th style="text-align: right;">Peso</th>
+<th>3 - Logro destacado</th>
+<th>2 - Logro</th>
+<th>1 - Proceso</th>
+<th>0 - Inicio</th>
+<th style="text-align: right;">Puntuación obtenida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Comprensión de la norma</td>
+<td style="text-align: right;">2</td>
+<td>Explica con precisión qué es la NTP ISO/IEC 12207 y su propósito.</td>
+<td>Explica correctamente qué es la norma.</td>
+<td>Explicación parcial o imprecisa.</td>
+<td>No explica qué es la norma.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>2. Estructura de procesos</td>
+<td style="text-align: right;">2</td>
+<td>Describe los cuatro grupos de procesos con palabras propias y ejemplos claros.</td>
+<td>Describe correctamente los cuatro grupos.</td>
+<td>Descripción incompleta o copiada.</td>
+<td>No identifica los grupos de procesos.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>3. Sistema o proyecto y ruta elegida</td>
+<td style="text-align: right;">2</td>
+<td>Sistema/proyecto delimitado, viable y ruta de trabajo bien justificada.</td>
+<td>Sistema/proyecto y ruta delimitados y comprensibles.</td>
+<td>Delimitación imprecisa o poco justificada.</td>
+<td>No delimita sistema, proyecto ni ruta.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>4. Priorización de procesos</td>
+<td style="text-align: right;">2</td>
+<td>Prioriza procesos con justificación sólida y conectada al proyecto.</td>
+<td>Prioriza procesos de forma correcta.</td>
+<td>Priorización débil o sin justificar.</td>
+<td>No prioriza procesos para el proyecto.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>5. Aporte individual</td>
+<td style="text-align: right;">1</td>
+<td>Aporte verificable y bien documentado.</td>
+<td>Aporte identificable.</td>
+<td>Aporte mencionado de forma general.</td>
+<td>Sin aporte individual.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>6. Orden y reflexión</td>
+<td style="text-align: right;">1</td>
+<td>Evidencia clara, ordenada y reflexión técnica precisa.</td>
+<td>Evidencia comprensible.</td>
+<td>Evidencia desordenada o superficial.</td>
+<td>Sin evidencia suficiente.</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>Puntuación acumulada = suma de (<code>Peso</code> * <code>Puntuación obtenida</code>) = ____.</p>
+<p>Nota final = (<code>Puntuación acumulada</code> / 30) * 20 = ____.</p>
+<p>Para usar la rúbrica con IA, solicita:</p>
+<pre><code class="language-text">Evalúa el PDF usando la rúbrica de la sesión.
+Para cada dimensión selecciona la puntuación obtenida usando la escala Inicio=0, Proceso=1, Logro=2, Logro destacado=3.
+Justifica brevemente cada puntuación.
+Calcula la puntuación acumulada con la fórmula: suma de (Peso * Puntuación obtenida).
+Calcula la nota final sobre 20 con la fórmula: (Puntuación acumulada / 30) * 20.
+Indica 2 fortalezas y 2 recomendaciones.
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
