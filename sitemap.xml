@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://262is2.github.io/demo-is2/</loc>
-         <lastmod>2026-08-10</lastmod>
+         <lastmod>2026-08-18</lastmod>
     </url>
     <url>
          <loc>https://262is2.github.io/demo-is2/silabo_is2_2026_1/</loc>
-         <lastmod>2026-08-10</lastmod>
+         <lastmod>2026-08-18</lastmod>
     </url>
     <url>
          <loc>https://262is2.github.io/demo-is2/silabo_is2_2026_2/</loc>
-         <lastmod>2026-08-10</lastmod>
+         <lastmod>2026-08-18</lastmod>
     </url>
     <url>
          <loc>https://262is2.github.io/demo-is2/proyecto-sello/</loc>
-         <lastmod>2026-08-10</lastmod>
+         <lastmod>2026-08-18</lastmod>
     </url>
     <url>
          <loc>https://262is2.github.io/demo-is2/sesiones/S01_NTP_ISO_IEC_12207/</loc>
-         <lastmod>2026-08-10</lastmod>
+         <lastmod>2026-08-18</lastmod>
+    </url>
+    <url>
+         <loc>https://262is2.github.io/demo-is2/sesiones/S02_Metricas_Proceso_Instrumentos_Aseguramiento/</loc>
+         <lastmod>2026-08-18</lastmod>
     </url>
 </urlset>
