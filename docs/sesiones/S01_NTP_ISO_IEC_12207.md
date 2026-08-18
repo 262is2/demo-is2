@@ -4,9 +4,9 @@
 
 Tiempo: 20 min.
 
-### 1.1 Contexto
+### 1.1 Presentación de la sesión
 
-Auditar (o desarrollar) software sin un marco de procesos común es como evaluar un edificio sin saber qué normas de construcción aplicar: cada persona juzga la calidad con su propio criterio. Esta sesión presenta el sílabo de Ingeniería de Software II y construye ese marco común: la **NTP ISO/IEC 12207**, la norma técnica peruana que modela los procesos del ciclo de vida del software y que fundamentará el Project Charter del proyecto integrador del semestre.
+Esta sesión abre el curso de Ingeniería de Software II: presenta el sílabo y construye el marco común de procesos sobre el que se apoyará todo el semestre, la **NTP ISO/IEC 12207**, la norma técnica peruana que modela los procesos del ciclo de vida del software y que fundamentará el Project Charter del proyecto integrador. El porqué de necesitar ese marco común antes de auditar o desarrollar cualquier sistema se desarrolla en 1.6, a partir del caso de la auditoría (o el desarrollo) sin procesos documentados.
 
 ### 1.2 Índice
 
@@ -27,11 +27,13 @@ Mapa de procesos NTP ISO/IEC 12207 priorizados para el proyecto integrador del e
 
 ### 1.5 Metodología
 
-| Fase | Actividades | Orientaciones | Material |
-|---|---|---|---|
-| Revisión previa individual | Leer el sílabo del curso y el resumen de la NTP ISO/IEC 12207 (ver 1.6). | Trabajo individual, antes de clase; traer al menos una idea de sistema o proyecto de software para auditar o desarrollar. | Sílabo IS2 U1. |
-| Clase presencial | Presentación del sílabo, lectura guiada del estándar y discusión de su estructura de procesos. | Trabajo en equipo, siguiendo al docente paso a paso; consulta inmediata ante dudas sobre el alcance de cada grupo de procesos. | Pasos 3.1 a 3.7 de esta guía. |
-| Evaluación formativa | Revisión en clase de la propuesta inicial del equipo (sistema elegido, ruta de trabajo, procesos priorizados, roles). | La evidencia se completa y sustenta de forma individual, fuera del aula, según los criterios mínimos de la sección 4.2. | Plantilla de evidencia individual (4.1), rúbrica de evaluación (5.4). |
+**Tabla 1. Metodología de la sesión**
+
+| Actividades a Realizar en el Periodo | Orientaciones generales (Orientaciones Metodológicas) | Material de estudio recomendado |
+|---|---|---|
+| Revisión previa individual | Leer el sílabo del curso y el resumen de la NTP ISO/IEC 12207 (ver 1.6). Trabajo individual, antes de clase; traer al menos una idea de sistema o proyecto de software para auditar o desarrollar. | Sílabo IS2 U1. |
+| Clase presencial | Presentación del sílabo, lectura guiada del estándar y discusión de su estructura de procesos. Trabajo en equipo, siguiendo al docente paso a paso; consulta inmediata ante dudas sobre el alcance de cada grupo de procesos. | Pasos 3.1 a 3.7 de esta guía. |
+| Evaluación formativa | Revisión en clase de la propuesta inicial del equipo (sistema elegido, ruta de trabajo, procesos priorizados, roles). La evidencia se completa y sustenta de forma individual, fuera del aula, según los criterios mínimos de la sección 4.4. | Indicaciones de entrega (4.3), rúbrica de evaluación (4.6). |
 
 ### 1.6 Motivación de la sesión
 
@@ -45,11 +47,16 @@ Pregunta guía:
 ¿Qué le falta a este equipo para convertir su lista de observaciones en una auditoría (o un desarrollo) técnicamente fundamentada?
 ```
 
-Preguntas para los estudiantes:
+**Preguntas de análisis**
+
+**Activación de conocimientos previos**
+
+1. ¿Por qué una lista de observaciones sueltas no es una auditoría de calidad?
+2. ¿Qué documento inicial habría ordenado el trabajo de este equipo, sea que audite o que desarrolle?
+
+**Comprensión del ciclo de vida del software**
 
 1. ¿Qué problemas genera evaluar (o construir) un sistema sin un marco de procesos común?
-2. ¿Por qué una lista de observaciones sueltas no es una auditoría de calidad?
-3. ¿Qué documento inicial habría ordenado el trabajo de este equipo, sea que audite o que desarrolle?
 
 ### 1.7 Ubicación en el curso
 
@@ -59,6 +66,8 @@ Preguntas para los estudiantes:
 - Avance del producto en esta sesión: equipo de trabajo conformado, sistema o proyecto de software elegido (a auditar o a desarrollar) y primer mapa de procesos NTP ISO/IEC 12207 priorizados.
 
 Roadmap del producto de unidad:
+
+**Figura 1. Roadmap del producto de la unidad**
 
 ```mermaid
 flowchart TB
@@ -92,6 +101,8 @@ En Perú, la norma es publicada por INDECOPI como adaptación nacional de la nor
 
 La NTP ISO/IEC 12207 organiza los procesos del ciclo de vida del software en cuatro grupos:
 
+**Tabla 2. Grupos de procesos de la NTP ISO/IEC 12207**
+
 | Grupo de procesos | Propósito | Ejemplos de procesos |
 |---|---|---|
 | Procesos de acuerdo | Formalizan la relación entre quien adquiere y quien provee el software. | Adquisición, Suministro. |
@@ -105,6 +116,8 @@ La NTP ISO/IEC 12207 organiza los procesos del ciclo de vida del software en cua
 
 La NTP ISO/IEC 12207 fue diseñada pensando en organizaciones de cualquier tamaño, lo que la hace extensa para un equipo pequeño o un proyecto académico. La **ISO/IEC 29110** (*Lifecycle Profiles for Very Small Entities*, VSE) resuelve ese problema: es un perfil simplificado de gestión e ingeniería dirigido a organizaciones de hasta 25 personas, que selecciona y adapta un subconjunto manejable de los procesos de la NTP ISO/IEC 12207, organizado en dos procesos centrales del **Perfil Básico**:
 
+**Tabla 3. Procesos del Perfil Básico ISO/IEC 29110 y su relación con la NTP ISO/IEC 12207**
+
 | Proceso ISO/IEC 29110 (Perfil Básico) | Relación con la NTP ISO/IEC 12207 |
 |---|---|
 | Gestión de Proyecto (PM) | Adapta los procesos de gestión de proyecto (planificación, control, riesgos, configuración) a un equipo pequeño. |
@@ -115,6 +128,8 @@ El curso trabaja la ISO/IEC 29110 en las sesiones S3 (Gestión del proyecto) y S
 ### 2.4 Del modelamiento de procesos al Project Charter
 
 Cada grupo de procesos alimenta directamente un componente del Project Charter y de la matriz de calidad que se construyen en esta unidad:
+
+**Tabla 4. Componentes del Project Charter y los grupos de procesos que los fundamentan**
 
 | Componente del Project Charter | Grupo(s) de procesos que lo fundamenta(n) |
 |---|---|
@@ -130,15 +145,21 @@ Un Project Charter que no puede trazarse a un grupo de procesos de la norma es u
 
 Tiempo: 2h.
 
-Hoja de ruta de la sesión práctica:
+**Actividad:** mapeo de procesos NTP ISO/IEC 12207 y elección del proyecto integrador del semestre.
 
-- 3.1 Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207.
-- 3.2 Leer el extracto guiado del estándar.
-- 3.3 Analizar el caso guiado y discutir en equipo.
-- 3.4 Elegir el sistema o proyecto y la ruta de trabajo (auditoría o desarrollo).
-- 3.5 Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido.
-- 3.6 Conformar el equipo de trabajo y roles iniciales.
-- 3.7 Completar la plantilla de propuesta inicial.
+**Propósito de la actividad:** reconocer la estructura de procesos de la norma, aplicarla a un caso guiado, y usarla para delimitar el sistema o proyecto, la ruta de trabajo y el equipo con el que se desarrollará el proyecto integrador durante el semestre.
+
+**Orientaciones metodológicas:** el docente guía la lectura del extracto del estándar y el análisis del caso paso a paso frente a la clase; los estudiantes replican el mapeo de procesos sobre su propio proyecto elegido, verificando cada paso (grupos de procesos reconocidos, caso reclasificado, proyecto y ruta elegidos, procesos priorizados, equipo conformado) antes de avanzar al siguiente.
+
+**Actividades para realizar:**
+
+- **3.1** Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207.
+- **3.2** Leer el extracto guiado del estándar.
+- **3.3** Analizar el caso guiado y discutir en equipo.
+- **3.4** Elegir el sistema o proyecto y la ruta de trabajo (auditoría o desarrollo).
+- **3.5** Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido.
+- **3.6** Conformar el equipo de trabajo y roles iniciales.
+- **3.7** Completar la plantilla de propuesta inicial.
 
 ### 3.1 Reconocer los cuatro grupos de procesos de la NTP ISO/IEC 12207
 
@@ -171,6 +192,8 @@ Cada equipo elige el sistema o proyecto de software real o simulado que trabajar
 ### 3.5 Mapear procesos NTP ISO/IEC 12207 aplicables al proyecto elegido
 
 **Producto del paso:** tabla de procesos priorizados para el proyecto del equipo.
+
+**Tabla 5. Priorización de grupos de procesos para el proyecto del equipo**
 
 | Grupo de procesos | ¿Aplica al proyecto? | Por qué |
 |---|---|---|
@@ -214,7 +237,25 @@ Primer riesgo identificado:
 
 Tiempo: 2h fuera del aula.
 
-### 4.1 Plantilla de evidencia individual
+### 4.1 Actividad
+
+Consolidación autónoma e individual del mapa de procesos NTP ISO/IEC 12207 priorizado para el proyecto integrador del equipo, documentada en evidencia individual.
+
+Completa y evidencia estas tareas:
+
+1. Confirmar el sistema o proyecto de software del semestre y la ruta de trabajo (auditoría o desarrollo).
+2. Redactar en tus propias palabras qué es la NTP ISO/IEC 12207 y por qué el curso la usa como marco conceptual.
+3. Redactar en tus propias palabras los cuatro grupos de procesos de la NTP ISO/IEC 12207.
+4. Priorizar los grupos de procesos aplicables a tu proyecto, con justificación.
+5. Registrar el equipo de trabajo y los roles iniciales.
+
+### 4.2 Propósito
+
+Que cada estudiante demuestre, de forma individual y fuera del aula, que puede reproducir el patrón construido en clase sin el acompañamiento del docente.
+
+Cada estudiante consolida individualmente el mapa de procesos priorizado y la propuesta inicial del proyecto de su equipo.
+
+### 4.3 Indicaciones
 
 Entrega un PDF con el siguiente nombre:
 
@@ -222,35 +263,34 @@ Entrega un PDF con el siguiente nombre:
 S01_Equipo##_ApellidoNombre.pdf
 ```
 
-El PDF debe usar esta estructura. La primera sección define el trabajo autónomo; completa las demás con tus evidencias.
+Cada captura de pantalla del informe debe mostrar, sin recortar, el reloj del sistema (fecha y hora) y tu usuario o foto de perfil (Windows, VS Code o navegador) visibles en pantalla — es lo que permite verificar que la evidencia es tuya y que corresponde al momento real de tu trabajo.
 
-#### 4.1.1 Datos del estudiante
+#### 4.3.1 Estructura del informe
+
+**Datos del estudiante**
 
 - Nombre:
 - Equipo:
 - Sesión: S01 - NTP ISO/IEC 12207: Modelamiento de Procesos del Ciclo de Vida del Software
 - Rol o aporte realizado:
-- Link del repositorio:
+- Link de GitHub:
 
-#### 4.1.2 Trabajo autónomo realizado
+**Evidencia técnica**
 
-Completa y evidencia estas tareas:
+Incluye capturas o extractos con una breve explicación debajo de cada uno, organizados en los mismos 5 bloques de la rúbrica (4.6) — así queda claro qué evidencia corresponde a cada criterio evaluado:
 
-1. Confirmar el sistema o proyecto de software del semestre y la ruta de trabajo (auditoría o desarrollo).
-2. Redactar en tus propias palabras los cuatro grupos de procesos de la NTP ISO/IEC 12207.
-3. Priorizar los grupos de procesos aplicables a tu proyecto, con justificación.
-4. Registrar el equipo de trabajo y los roles iniciales.
+1. *Comprensión de la norma*
+    - Explicación breve, en palabras propias, de qué es la NTP ISO/IEC 12207 y por qué el curso la usa como marco conceptual para el proyecto integrador.
+2. *Estructura de procesos*
+    - Lista de los cuatro grupos de procesos con descripción propia (equivalente a 3.1).
+3. *Sistema o proyecto y ruta elegida*
+    - Plantilla de propuesta inicial completa, con el sistema o proyecto y la ruta de trabajo (auditoría o desarrollo) confirmados (equivalente a 3.4 y 3.7).
+4. *Priorización de procesos*
+    - Tabla de procesos priorizados para el proyecto, con justificación (equivalente a 3.5).
+5. *Aporte individual*
+    - Ficha del equipo con roles iniciales y el aporte propio señalado (equivalente a 3.6).
 
-#### 4.1.3 Evidencia técnica
-
-Incluye capturas o extractos con una breve explicación debajo de cada uno:
-
-- Lista de los cuatro grupos de procesos con descripción propia (equivalente a 3.1).
-- Tabla de procesos priorizados para el proyecto, con justificación (equivalente a 3.5).
-- Ficha del equipo con roles iniciales (equivalente a 3.6).
-- Plantilla de propuesta inicial completa (equivalente a 3.7).
-
-#### 4.1.4 Error o hallazgo
+**Error o hallazgo**
 
 Describe al menos un riesgo o duda que identificaste al elegir el sistema, la ruta de trabajo o priorizar los procesos:
 
@@ -258,7 +298,7 @@ Describe al menos un riesgo o duda que identificaste al elegir el sistema, la ru
 - Cómo lo identificaste.
 - Cómo lo documentaste o qué supuesto tomaste.
 
-#### 4.1.5 Reflexión técnica breve
+**Reflexión técnica breve**
 
 Responde en 5 a 8 líneas:
 
@@ -266,7 +306,7 @@ Responde en 5 a 8 líneas:
 ¿Por qué una auditoría (o un desarrollo) de software debe fundamentarse en un estándar de procesos como la NTP ISO/IEC 12207 antes de emitir cualquier observación?
 ```
 
-### 4.2 Criterios mínimos de aceptación
+### 4.4 Criterios mínimos de aceptación
 
 La evidencia individual se considera completa si:
 
@@ -275,71 +315,58 @@ La evidencia individual se considera completa si:
 - Los procesos priorizados para el proyecto están justificados con al menos una razón concreta cada uno.
 - El equipo de trabajo y los roles iniciales están registrados.
 - La evidencia identifica un aporte individual verificable.
+- Cada captura de la evidencia técnica muestra el reloj del sistema y el usuario/perfil visible, sin recortar.
+- Las fechas y horas de las capturas son coherentes con el historial de commits de su repositorio en GitHub.
+- Incluye un error o hallazgo técnico diagnosticado.
+- Incluye la reflexión técnica breve solicitada.
 
-## 5. Cierre evaluativo
-
-Tiempo: 20 min.
-
-Esta sección conecta el resultado de aprendizaje de la sesión con el producto que debe evidenciar cada estudiante.
-
-### 5.1 Resultados esperados
-
-Al finalizar la sesión, el estudiante debe demostrar que:
-
-- Explica qué es la NTP ISO/IEC 12207 y por qué el curso la usa como marco conceptual.
-- Identifica los cuatro grupos de procesos de la norma.
-- Reconoce la relación entre la NTP ISO/IEC 12207 y la ISO/IEC 29110.
-- Delimita el sistema o proyecto de software y la ruta de trabajo (auditoría o desarrollo) del semestre.
-- Conforma un equipo de trabajo con roles iniciales.
-
-### 5.2 Evidencia del producto de sesión
-
-Cada estudiante entrega un PDF individual siguiendo la plantilla de la sección 4.1.
-
-Nombre del archivo:
-
-```text
-S01_Equipo##_ApellidoNombre.pdf
-```
-
-La evidencia debe demostrar:
-
-- Sistema o proyecto y ruta de trabajo delimitados.
-- Procesos NTP ISO/IEC 12207 priorizados y justificados.
-- Equipo de trabajo conformado.
-- Reflexión técnica breve.
-
-La revisión se realiza con los criterios mínimos de aceptación de la sección 4.2 y la rúbrica de la sección 5.4.
-
-### 5.3 Preguntas de defensa y reflexión
+### 4.5 Preguntas de defensa
 
 1. ¿Qué diferencia hay entre un proceso de gestión de proyecto y un proceso técnico según la NTP ISO/IEC 12207?
 2. ¿Qué grupo de procesos consideras más crítico para tu proyecto y por qué?
 3. ¿Por qué tu equipo eligió la ruta de auditoría o la ruta de desarrollo?
 4. ¿Cómo se conecta la ISO/IEC 29110 con la NTP ISO/IEC 12207 que trabajaste hoy?
 
-### 5.4 Rúbrica de evaluación
+### 4.6 Rúbrica de evaluación
 
-| Dimensión | Peso | 3 - Logro destacado | 2 - Logro | 1 - Proceso | 0 - Inicio | Puntuación obtenida |
+**Tabla 6. Rúbrica de evaluación**
+
+| Criterio | Peso (%) | A (20 pts) | B (15 pts) | C (10 pts) | D (5 pts) | Nivel obtenido |
 |---|---:|---|---|---|---|---:|
-| 1. Comprensión de la norma | 2 | Explica con precisión qué es la NTP ISO/IEC 12207 y su propósito. | Explica correctamente qué es la norma. | Explicación parcial o imprecisa. | No explica qué es la norma. | |
-| 2. Estructura de procesos | 2 | Describe los cuatro grupos de procesos con palabras propias y ejemplos claros. | Describe correctamente los cuatro grupos. | Descripción incompleta o copiada. | No identifica los grupos de procesos. | |
-| 3. Sistema o proyecto y ruta elegida | 2 | Sistema/proyecto delimitado, viable y ruta de trabajo bien justificada. | Sistema/proyecto y ruta delimitados y comprensibles. | Delimitación imprecisa o poco justificada. | No delimita sistema, proyecto ni ruta. | |
-| 4. Priorización de procesos | 2 | Prioriza procesos con justificación sólida y conectada al proyecto. | Prioriza procesos de forma correcta. | Priorización débil o sin justificar. | No prioriza procesos para el proyecto. | |
-| 5. Aporte individual | 1 | Aporte verificable y bien documentado. | Aporte identificable. | Aporte mencionado de forma general. | Sin aporte individual. | |
-| 6. Orden y reflexión | 1 | Evidencia clara, ordenada y reflexión técnica precisa. | Evidencia comprensible. | Evidencia desordenada o superficial. | Sin evidencia suficiente. | |
+| 1. Comprensión de la norma* | 20 | Explica con precisión qué es la NTP ISO/IEC 12207 y su propósito. | Explica correctamente qué es la norma. | Explicación parcial o imprecisa. | No explica qué es la norma. | |
+| 2. Estructura de procesos* | 20 | Describe los cuatro grupos de procesos con palabras propias y ejemplos claros. | Describe correctamente los cuatro grupos. | Descripción incompleta o copiada. | No identifica los grupos de procesos. | |
+| 3. Sistema o proyecto y ruta elegida* | 20 | Sistema/proyecto delimitado, viable y ruta de trabajo bien justificada. | Sistema/proyecto y ruta delimitados y comprensibles. | Delimitación imprecisa o poco justificada. | No delimita sistema, proyecto ni ruta. | |
+| 4. Priorización de procesos* | 20 | Prioriza procesos con justificación sólida y conectada al proyecto. | Prioriza procesos de forma correcta. | Priorización débil o sin justificar. | No prioriza procesos para el proyecto. | |
+| 5. Aporte individual* | 20 | Aporte verificable y bien documentado. | Aporte identificable. | Aporte mencionado de forma general. | Sin aporte individual. | |
 
-Puntuación acumulada = suma de (`Peso` * `Puntuación obtenida`) = ____.
+\* Agregado manual.
 
-Nota final = (`Puntuación acumulada` / 30) * 20 = ____.
+Nota final = suma de (`Peso` / 100 × `Puntos del nivel obtenido`) = ____ / 20.
 
 Para usar la rúbrica con IA, solicita:
 
 ```text
 Evalúa el PDF usando la rúbrica de la sesión.
-Para cada dimensión selecciona la puntuación obtenida usando la escala Inicio=0, Proceso=1, Logro=2, Logro destacado=3.
-Justifica brevemente cada puntuación.
-Calcula la puntuación acumulada con la fórmula: suma de (Peso * Puntuación obtenida).
-Calcula la nota final sobre 20 con la fórmula: (Puntuación acumulada / 30) * 20.
+Para cada criterio selecciona el nivel obtenido usando la escala A=20, B=15, C=10, D=5 puntos.
+Justifica brevemente cada nivel asignado.
+Verifica que cada captura muestre reloj del sistema y usuario/perfil visible, y que las fechas sean coherentes con el historial de commits de GitHub. Si falta esta evidencia o hay inconsistencias, indícalo explícitamente antes de calificar.
+Calcula la nota final con la fórmula: suma de (Peso/100 × Puntos del nivel obtenido), directamente sobre 20.
 Indica 2 fortalezas y 2 recomendaciones.
 ```
+
+## 5. Cierre
+
+Tiempo: 5 min.
+
+**Resumen breve:** hoy el equipo pasó de tener observaciones sueltas sobre un caso sin procesos documentados a tener un sistema o proyecto elegido, un mapa de procesos NTP ISO/IEC 12207 priorizado y un equipo de trabajo conformado — la base del Project Charter que se construye durante la unidad.
+
+**Dinámica participativa:** en una ronda rápida (o con una herramienta digital tipo formulario o encuesta en vivo), cada estudiante comparte en una frase el grupo de procesos que priorizó como más crítico para su proyecto y por qué.
+
+**Metacognición:** cada estudiante responde en voz alta o por escrito: ¿qué parte de la sesión te costó más entender, y cómo la resolviste?
+
+**Proyección:** el mapa de procesos de hoy se retoma en S2 (métricas de proceso e instrumentos de aseguramiento) y se refina con la ISO/IEC 29110 en S3-S4, hasta sustentar el Project Charter completo en la evaluación de la Unidad 1 — igual que en cualquier auditoría o desarrollo profesional, donde el mapa de procesos inicial se ajusta a medida que se conoce mejor el sistema o el proyecto.
+
+## Bibliografía
+
+1. International Organization for Standardization. (2017). *ISO/IEC/IEEE 12207:2017 — Systems and software engineering — Software life cycle processes*. https://www.iso.org/standard/63712.html
+2. International Organization for Standardization. (2016). *ISO/IEC/IEEE 29110-5-1-2:2016 — Systems and software engineering — Lifecycle profiles for Very Small Entities (VSE) — Part 5-1-2: Management and engineering guide: Generic profile group: Basic profile*. https://www.iso.org/standard/62711.html
